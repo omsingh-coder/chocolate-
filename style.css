@@ -1,0 +1,103 @@
+/* General Styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    overflow: hidden;
+  }
+  
+  /* Background Gradient Animation */
+  .background {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #ffb347, #ffcc33, #ff6699, #ff99cc);
+    background-size: 400% 400%;
+    animation: backgroundAnimation 8s infinite alternate;
+    z-index: -1;
+  }
+  
+  /* Background Gradient Keyframes */
+  @keyframes backgroundAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  /* Content Styling */
+  .content {
+    position: relative;
+    top: 20%;
+    color: #fff;
+  }
+  
+  /* Button Styling */
+  .button {
+    background: #5d4037;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    margin: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .button:hover {
+    background: #8d6e63;
+    transform: scale(1.1);
+  }
+  
+  /* Floating Chocolate Animation */
+  @keyframes floatingChocolates {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
+  }
+  
+  .chocolate {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: url('https://th.bing.com/th/id/R.cf659ab5163fe3d9719e3f26c15615e3?rik=yE7S5r2hySoPBw&riu=http%3a%2f%2fimages2.alphacoders.com%2f208%2f208042.jpg&ehk=t25uOutCjKolxGUc33Qbfmqv%2bx9LCLYEaaFM%2fsdKzJU%3d&risl=1&pid=ImgRaw&r=0') no-repeat center;
+    background-size: contain;
+    animation: floatingChocolates 3s infinite ease-in-out;
+    opacity: 0.7;
+  }
+
+
+  /* Text breaking effect */
+.breaking-text span {
+    display: inline-block;
+    position: relative;
+    animation: breakApart 0.8s forwards ease-in-out;
+  }
+  
+  @keyframes breakApart {
+    0% {
+      opacity: 1;
+      transform: translate(0, 0) rotate(0);
+    }
+    100% {
+      opacity: 0;
+      transform: translate(calc(-100px + 200px * var(--randomX)), calc(-100px + 200px * var(--randomY))) rotate(calc(-30deg + 60deg * var(--randomR)));
+    }
+  }
+
+  /* Circle rotation effect */
+body {
+    animation: rotateIn 1.5s ease-out;
+  }
+  
+  @keyframes rotateIn {
+    0% {
+      transform: scale(0) rotate(-180deg);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1) rotate(0deg);
+      opacity: 1;
+    }
+  }
